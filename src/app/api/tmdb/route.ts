@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const res = await fetch(API.search + searchParams.get("query"), {
     headers: {
-      Authorization: `Bearer ${process.env.TMDB_ACCESS_KEY}`,
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMjkxNjliYzQzOTYwMjM0Mjk1MzdhZmJhZTA1OTdhMSIsInN1YiI6IjY1MjJhZDNhMDcyMTY2MDExYzA1ZTkwMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.otg_ClaImVTBZVXywTB1l2E9WlLUYfnMR12uNkacmCM`,
       accept: "application/json",
     },
   });
